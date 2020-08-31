@@ -1,4 +1,3 @@
-const BrowserHelper = require('../helpers/BrowserHelpers');
 const BrowserHelpers = require('../helpers/BrowserHelpers');
 
 class SenarioServices {
