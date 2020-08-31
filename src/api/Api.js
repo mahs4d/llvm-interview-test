@@ -3,7 +3,7 @@ const Path = require('path');
 const Express = require('express');
 const ExpressSession = require('express-session');
 const BodyParser = require('body-parser');
-const AuthMiddlewares = require('./auth/Middlewares')
+const AuthMiddlewares = require('./auth/Middlewares');
 
 class Api {
     constructor() {
@@ -20,6 +20,9 @@ class Api {
 
         this._app.use(AuthMiddlewares.authenticate);
 
+        this._app.get('/', (req, res) => {
+            res.redirect('/page1');
+        });
         this._app.use(require('./auth/router'));
         this._app.use(require('./pages/router'));
     }
