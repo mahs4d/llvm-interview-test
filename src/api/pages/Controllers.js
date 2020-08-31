@@ -1,9 +1,23 @@
+const SenarioServices = require('../../core/SenarioServices');
+
 class PagesControllers {
-    static showPage1(req, res, next) {}
+    static showPage1(req, res) {
+        const senarioId = SenarioServices.getRequestSenarioId(req.user, req.headers['user-agent']);
+        const pageColor = SenarioServices.getPage1ColorBySenarioId(senarioId);
+        res.render('colored-page', { pageColor });
+    }
 
-    static showPage2(req, res, next) {}
+    static showPage2(req, res) {
+        const senarioId = SenarioServices.getRequestSenarioId(req.user, req.headers['user-agent']);
+        const pageColor = SenarioServices.getPage2ColorBySenarioId(senarioId);
+        res.render('colored-page', { pageColor });
+    }
 
-    static showPage3(req, res, next) {}
+    static showPage3(req, res) {
+        const senarioId = SenarioServices.getRequestSenarioId(req.user, req.headers['user-agent']);
+        const pageColor = SenarioServices.getPage3ColorBySenarioId(senarioId);
+        res.render('colored-page', { pageColor });
+    }
 }
 
 module.exports = PagesControllers;
