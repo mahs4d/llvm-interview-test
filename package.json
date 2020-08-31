@@ -1,0 +1,21 @@
+{
+  "name": "llvm-interview-test",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahs4d/llvm-interview-test.git"
+  },
+  "author": "Mahdi Sadeghi <mail2mahsad@gmail.com> (https://mahsad.ir/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mahs4d/llvm-interview-test/issues"
+  },
+  "homepage": "https://github.com/mahs4d/llvm-interview-test#readme",
+  "engines": {
+    "node": ">=10.0.0"
+  }
+}
