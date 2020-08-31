@@ -9,6 +9,7 @@
         "prettier/prettier": "warn",
         "no-restricted-syntax": "off",
         "no-continue": "off",
-        "no-await-in-loop": "off"
+        "no-await-in-loop": "off",
+        "no-underscore-dangle": "off"
     }
 }
