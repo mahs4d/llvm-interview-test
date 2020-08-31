@@ -29,6 +29,11 @@ class AuthControllers {
 
         res.redirect('/page1');
     }
+
+    static async logout(req, res) {
+        req.session.user = null;
+        res.redirect('page1');
+    }
 }
 
 module.exports = AuthControllers;
