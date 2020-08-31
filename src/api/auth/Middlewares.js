@@ -1,12 +1,22 @@
 class AuthMiddlewares {
     static authenticate(req, res, next) {
-        // todo:
+        if (req.session.user) {
+            req.isAuthenticated = true;
+            req.user = req.session.user;
+        } else {
+            req.isAuthenticated = false;
+            req.user = null;
+        }
+
         next();
     }
 
-    static requireAuthentication(req, res, next) {
-        // todo:
-        next();
+    static requireLogin(req, res, next) {
+        if (req.isAuthenticated) {
+            next();
+        } else {
+            res.redirect('/login');
+        }
     }
 }
 
